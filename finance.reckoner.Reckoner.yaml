@@ -25,12 +25,12 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v1.0.5/reckoner-linux-1.0.5-x86_64.tar.gz
-        sha256: fe88e3f7885a530feef3c9f130b08cafcc11444a165c7dbd6a06ab726fd37047
+        url: https://codeberg.org/Reckoner/app/releases/download/v1.0.6/reckoner-linux-1.0.6-x86_64.tar.gz
+        sha256: 5c4699120111f26dbc95222927db7dc6d46c4d51668c919f9616b4c328062e2f
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
-        tag: v1.0.5
+        tag: v1.0.6
   - name: zenity
     buildsystem: meson
     sources:
