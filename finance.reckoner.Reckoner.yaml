@@ -30,7 +30,7 @@ modules:
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
-        tag: v1.0.9
+        tag: main
   - name: zenity
     buildsystem: meson
     sources:
