@@ -25,8 +25,8 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v1.0.9/reckoner-linux-1.0.9-x86_64.tar.gz
-        sha256: f86181639d6a57e84477a23a9aa6686a951251b22082b09e0472a79a119cbdfe
+        url: https://codeberg.org/Reckoner/app/releases/download/v1.0.10/reckoner-linux-1.0.10-x86_64.tar.gz
+        sha256: 46d5065a673b135d5ec6b23dddeffcf35143d4aeb129e0d0f4b6c845a0662385
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
