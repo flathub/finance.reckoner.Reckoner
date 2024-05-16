@@ -1,16 +1,28 @@
 app-id: finance.reckoner.Reckoner
-runtime: org.gnome.Platform
-runtime-version: "45"
-sdk: org.gnome.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+# Need this extension for ayatana-ido build
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.vala
+build-options:
+  append-path: "/usr/lib/sdk/vala/bin"
+  prepend-ld-library-path: "/usr/lib/sdk/vala/lib"
 command: reckoner
 separate-locales: false
 finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --share=network
-  - --filesystem=home
   - --share=ipc
   - --device=dri
+  # Default backup location
+  - --filesystem=xdg-documents
+  # Secret Service
+  - --own-name=org.freedesktop.secrets
+  # Permissions for desktop system tray
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
 modules:
   - name: reckoner
     buildsystem: simple
@@ -25,15 +37,20 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v1.0.19/reckoner-1.0.19-linux-x86_64.tar.gz
-        sha256: 82b297c8ddf1ebe46a2dbd60fcaeb8d5d64d1d79d88fd1d585f90aadb2cb8f68
+        url: https://codeberg.org/Reckoner/app/releases/download/v1.1.0/reckoner-1.1.0-linux-x86_64.tar.gz
+        sha256: a5f365660e07c43c1cd9aaf4b670ac6ebc4e103e52aec5cd175fa63b5295f9da
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
         tag: main
+  # Needed for file picker
   - name: zenity
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.1.tar.xz
-        sha256: 0c2f537813b10f728470d9d05d6c95713db2512f9c95096e1e85b1a6739605e6
+        url: https://download.gnome.org/sources/zenity/3.41/zenity-3.41.0.tar.xz
+        sha256: 19b676c3510e22badfcc3204062d432ba537402f5e0ae26128c0d90c954037e1
+  # Needed for system_tray
+  - libayatana-appindicator3-0.1.yml
+  # Needed for secret management
+  - module-libsecret.yaml
