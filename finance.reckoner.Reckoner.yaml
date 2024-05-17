@@ -19,7 +19,7 @@ finish-args:
   # Default backup location
   - --filesystem=xdg-documents
   # Secret Service
-  - --own-name=org.freedesktop.secrets
+  - --talk-name=org.freedesktop.secrets
   # Permissions for desktop system tray
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
