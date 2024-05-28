@@ -21,7 +21,6 @@ finish-args:
   # Secret Service
   - --talk-name=org.freedesktop.secrets
   # Permissions for desktop system tray
-  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
 modules:
   - name: reckoner
