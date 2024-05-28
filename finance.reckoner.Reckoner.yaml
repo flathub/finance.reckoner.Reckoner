@@ -21,7 +21,6 @@ finish-args:
   # Secret Service
   - --talk-name=org.freedesktop.secrets
   # Permissions for desktop system tray
-  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
 modules:
   - name: reckoner
@@ -37,8 +36,8 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v1.1.2/reckoner-1.1.2-linux-x86_64.tar.gz
-        sha256: fb0cd4e806b840991964f5048c4cf7a8505d29a5dd6ff477516643eb4cdcceaf
+        url: https://codeberg.org/Reckoner/app/releases/download/v1.1.3/reckoner-1.1.3-linux-x86_64.tar.gz
+        sha256: f9054660a8d606de82ccf0def3d1bb81b5298ca04a78d6d9149b770d47de96be
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
