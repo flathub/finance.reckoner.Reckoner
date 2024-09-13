@@ -27,6 +27,7 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/reckoner
+      - if [ $(arch)="aarch64"  ]; then sed -si "/Exec=/cExec=env LIBGL_ALWAYS_SOFTWARE=1 reckoner" reckoner-git/linux/flatpak/${FLATPAK_ID}.desktop; fi
       - install -Dm644 reckoner-git/linux/flatpak/${FLATPAK_ID}.png -t ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/
       - install -Dm644 reckoner-git/linux/flatpak/${FLATPAK_ID}.desktop -t ${FLATPAK_DEST}/share/applications/
       - install -Dm644 reckoner-git/linux/flatpak/${FLATPAK_ID}.appdata.xml -t ${FLATPAK_DEST}/share/appdata/
