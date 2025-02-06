@@ -1,13 +1,13 @@
 app-id: finance.reckoner.Reckoner
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 # Need this extension for ayatana-ido build
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.vala
 build-options:
-  append-path: "/usr/lib/sdk/vala/bin"
-  prepend-ld-library-path: "/usr/lib/sdk/vala/lib"
+  append-path: '/usr/lib/sdk/vala/bin'
+  prepend-ld-library-path: '/usr/lib/sdk/vala/lib'
 command: reckoner
 separate-locales: false
 finish-args:
@@ -38,12 +38,12 @@ modules:
         only-arches: [x86_64]
         dest: bundle
         url: https://codeberg.org/Reckoner/app/releases/download/v2.2.5/reckoner-2.2.5-linux-x86_64.tar.gz
-        sha256: 6a68fe1970f600fb3e27ab9c0d6ffc66e61b4b9c4b6bc5763fb4bfa154f070d5
+        sha256: 505c0fe80d937c2eb36f25e576fc4e039a1e587f2bdb8fce8df08ec32ad6d628
       - type: archive
         only-arches: [aarch64]
         dest: bundle
         url: https://codeberg.org/Reckoner/app/releases/download/v2.2.5/reckoner-2.2.5-linux-aarch64.tar.gz
-        sha256: df50f1180ce31607d710b462b5e60f7c4388ef485010ecf9c3dfeafda5fa75c4
+        sha256: 24112b1f315ec033579061f9a8e6aa6dc77f3db1e96fb5c06c1840bec58f0f5f
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
