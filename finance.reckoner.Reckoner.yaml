@@ -1,6 +1,6 @@
 app-id: finance.reckoner.Reckoner
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 # Need this extension for ayatana-ido build
 sdk-extensions:
@@ -37,13 +37,13 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v3.0.3/reckoner-3.0.3-linux-x86_64.tar.gz
-        sha256: da4ae73fd0f03936f30713cc8391f85b000fb661b6a46ea4286e4cad92001efe
+        url: https://codeberg.org/Reckoner/app/releases/download/v4.0.0/reckoner-4.0.0-linux-x86_64.tar.gz
+        sha256: b724b17cb095409077c65423882fe098658088c191438c863b97e22013616374
       - type: archive
         only-arches: [aarch64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v3.0.3/reckoner-3.0.3-linux-aarch64.tar.gz
-        sha256: ee687861a9b3dae4be3e55dc8e5f2fd2fe1929a08b6d0a6eb13efe0211960f0e
+        url: https://codeberg.org/Reckoner/app/releases/download/v4.0.0/reckoner-4.0.0-linux-aarch64.tar.gz
+        sha256: f922a429316a86b5db54e263a43f5da24fa6c30511f3415e7b8ef8e01d5ca6ef
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
