@@ -3,11 +3,11 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 # Need this extension for ayatana-ido build
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.vala
-build-options:
-  append-path: '/usr/lib/sdk/vala/bin'
-  prepend-ld-library-path: '/usr/lib/sdk/vala/lib'
+# sdk-extensions:
+#   - org.freedesktop.Sdk.Extension.vala
+# build-options:
+#   append-path: '/usr/lib/sdk/vala/bin'
+#   prepend-ld-library-path: '/usr/lib/sdk/vala/lib'
 command: reckoner
 separate-locales: false
 finish-args:
@@ -37,13 +37,13 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v4.0.4/reckoner-4.0.4-linux-x86_64.tar.gz
-        sha256: 93edde4a3b33e5a08a7ede42ae645862bc9b8a4cd24504b67f48db13bb19589c
+        url: https://codeberg.org/Reckoner/app/releases/download/v5.0.0/reckoner-5.0.0-linux-x86_64.tar.gz
+        sha256: 2389d6e4125c9ccb2d64d898218954d3e41efc62e1fae7b5c6930e147bfb1243
       - type: archive
         only-arches: [aarch64]
         dest: bundle
-        url: https://codeberg.org/Reckoner/app/releases/download/v4.0.4/reckoner-4.0.4-linux-aarch64.tar.gz
-        sha256: bbd7fb459ca0a5a570371e84b9c59d111b9bf8b4d5f02495da689c9d22bfa5af
+        url: https://codeberg.org/Reckoner/app/releases/download/v5.0.0/reckoner-5.0.0-linux-aarch64.tar.gz
+        sha256: 71872e1ca7438218587cd1e8328630d959a2ce450cb853decb6aa6229aaafd5e
       - type: git
         url: https://codeberg.org/Reckoner/app.git
         dest: reckoner-git
@@ -56,6 +56,6 @@ modules:
         url: https://download.gnome.org/sources/zenity/3.41/zenity-3.41.0.tar.xz
         sha256: 19b676c3510e22badfcc3204062d432ba537402f5e0ae26128c0d90c954037e1
   # Needed for system_tray
-  - libayatana-appindicator3-0.1.yml
+  # - libayatana-appindicator3-0.1.yml
   # Needed for secret management
   - module-libsecret.yaml
